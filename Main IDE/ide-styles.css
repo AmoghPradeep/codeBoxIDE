@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    cursor: default;
+    margin: 0;
+    overflow: hidden;
+}
+button{
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+
+}
+textarea{
+    resize: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+input{
+    font-family: 'Open Sans', sans-serif;
+}
+input:focus{
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-track {
+background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: rgb(173, 173, 173);
+border-radius: 20px;
+border: none;
+}
+
+.custom-right{
+    right : 0px;
+}
+.remove{
+    display: none;
+}
+
+.hide{
+    visibility: hidden;
+}
+.focus-out{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 10;
+    top: 0;
+    opacity: 0.3;
+}
+
+.header{
+    position: fixed;
+    background-color: white;
+    cursor: default;
+    top: 0%;
+    width: 100%;
+    height: 7%;
+    border-bottom: none;
+    border-bottom-color: lightgrey;
+    border-bottom-width: 0.5px;
+    z-index: 10;
+    background-color: #2C2C2C;
+}
+.header-img{
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    left: 3%;
+}
+
+
+/* navigationbar */
+.nav-bar{
+    position: absolute;
+    height: 100%;
+    left: 15%;
+    width: 85%;
+    border-left: 1px solid black;
+}
+
+.file-name{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    height: 75%;
+    width: 25%;
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    border: none;
+    background: #2C2C2C;
+    color: rgb(182, 182, 182);
+    border-radius: 5px;
+    padding-left: 17px;
+    padding-right: 40px;
+}
+
+.file-name:hover {
+   background-color:  #505050;
+}
+.file-name:focus{
+    outline: none;
+}
+
+
+/* windows */
+
+/* code-area */
+.code-area{
+    position: absolute;
+    height: 93%;
+    width: 83%;
+    left: 0%;
+    top: 7%;
+}
+.editor-window{
+    position: absolute;
+    height: 93%;
+    width: 100%;
+    top: 0%;
+    border: none;
+}
+.social{
+    width: 100%;
+    height: 7%;
+    position: absolute;
+    cursor: default;
+    top: 93%;
+    background-color: rgb(240, 240, 240);
+    border: 2px solid lightgrey;
+}
+
+ /* ### IO STUFF ### */
+.io-container{
+    position: absolute;
+    height: 93%;
+    width: 17%;
+    right: 0%;
+    top: 7%;
+}
+
+.input-container{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 0%;
+    border-top:1px solid lightgrey;
+}
+
+.input-textarea{
+    position: absolute;
+    left: 0%;
+    top: 40px;
+    height: 264px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.input-box{
+    background-color: rgb(246, 246, 246);
+
+    position: absolute;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 16px;
+    height: 100%;
+
+    width: 100%;
+    padding: 0;
+    padding-left: 3px;
+    padding-top: 7px;
+    margin: 0;
+    top: 0px;
+    border: none;
+    border-left: 1px solid lightgrey;
+}
+
+
+.input-hdn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    border-left: 1px solid lightgrey;
+    box-shadow: 0px 3px 5px lightgrey;
+    z-index: 1;
+    background-color: rgb(230, 230, 230);
+}
+
+.output-container{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0%;
+    left: 0%;
+}
+.output-textarea{
+    position: absolute;
+    left: 0%;
+    top: 40px;
+    height: 264px;
+    overflow: hidden;
+    width: 100%;
+}
+.output-box{
+    background-color: rgb(246, 246, 246);
+    height: 100%;
+    overflow: scroll;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 0;
+    padding-left: 3px;
+    padding-top: 7px;
+    margin: 0;
+    position: absolute;
+    border:none;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+.output-hdn{
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-left: 1px solid lightgrey;
+    box-shadow: 0px 3px 5px lightgrey;
+    z-index: 1;
+    background-color: rgb(230, 230, 230);
+}
+
+
+.io-resizer{
+    width: 6px;
+    height: 100%;
+    position: absolute;
+    left: -2px;
+    background-color: #4A86FF;
+    z-index: 2;
+    cursor: e-resize;
+    opacity: 0;
+}
+.io-resizer:hover{
+    opacity: 1;
+}
+
+.input-resizer{
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    top: -3px;
+    left: 0%;
+    background-color: #4A86FF;
+    z-index: 2;
+    cursor: n-resize;
+    opacity: 0;
+}
+.input-resizer:hover{
+    opacity: 1;
+}
+
+/* settings */
+
+.settings{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    width: 50px;
+    height: 100%;
+    top: 0%;
+    right: 150px;
+}
+
+.settings-menu{
+    position: absolute;
+    background-color: white;
+    border-radius: 9px;
+    border: 1.3px solid lightgrey;
+    height: 315px;
+    width: 40%;
+    z-index: 10;
+    right: 30%;
+    top: 125px;
+}
+
+/* Create Room */
+
+.create-room{
+    position: absolute;
+    background-color: white;
+    border-radius: 9px;
+    border: 1.3px solid lightgrey;
+    height: 250px;
+    width: 35%;
+    z-index: 10;
+    right: 32.5%;
+    top: 125px;
+}
+
+.room-name-hdn{
+    padding-left: 30px;
+    padding-top: 15px;
+    margin: 10px 0px;
+}
+
+.room-pass-hdn{
+    padding-left: 30px;
+    padding-top: 15px;
+    margin: 10px 0px;
+
+}
+
+.create-room-btn{
+    position: absolute;
+    bottom: 11%;
+    height: 35px !important;
+    width: 30%;
+    right: 35%;
+    background-color: white;
+    border: 1px lightgrey solid;
+    border-radius: 8px;
+    transition-duration: 100ms;
+}
+
+.create-room-btn:hover{
+    background-color: #4A86FF;
+    color : white;
+}
+
+/* buttons */
+.font-btn{
+    width: 90%;
+    height: 34px;
+    left: 5%;
+    position: absolute;
+    top: 22%;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.theme-btn{
+    width: 90%;
+    height: 34px;
+    left: 5%;
+    position: absolute;
+    top: 47.5%;
+    text-align: left;
+    font-size: 0.9rem;
+}
+.tab-btn{
+    width: 90%;
+    height: 34px;
+    left: 5%;
+    position: absolute;
+    top: 74%;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.drop-btn{
+    border:1px solid lightgrey;
+    border-radius: 5px;
+}
+.drop-btn:hover{
+    background-color: lightgrey;
+}
+
+.theme-options{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 187.5px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    left: 5%;
+    top: 58%;
+    z-index: 20;
+}
+.tab-options{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 90px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    left: 5%;
+    top: 84%;
+    z-index: 20;
+
+}
+.font-options{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 150px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    left: 5%;
+    top: 32%;
+    z-index: 20;
+
+}
+
+.choice-btn{
+    background-color: white;
+    width: 98%;
+    height: 18%;
+    border: none;
+    margin: 1% 1%;
+    border-radius: 3px;
+    left: 0;
+    z-index: 20;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.choice-btn:hover{
+    background-color: lightgrey;
+}
+
+.selected-choice{
+    color: blue;
+}
+
+.run-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 0%;
+    right: 0px;
+    border: none;
+    background: transparent;
+    color: rgb(92,184,92);
+    font-size: 22px;
+    transition-duration: 300ms;
+}
+
+.run-btn:hover{
+    background-color: rgb(92,184,92);
+    color: white;
+}
+
+.save-btn{
+    font-family: 'Rubik', sans-serif;
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    right: 100px;
+    border-radius: 0px;
+    text-align: center;
+}
+
+.room-btn{
+    font-family: 'Rubik', sans-serif;
+    width: 116px;
+    height: 70%;
+    position: absolute;
+    top: 7.5%;
+    right: 13px;
+    border-radius: 10px;
+    color: #F9A825;
+    background-color: white;
+    border: 1px solid;
+}
+.room-btn:hover{
+    color: white;
+    background-color: #F9A825;
+}
+.green-btn{
+    border: none;
+    background-color: #5CB85C;
+    color: white;
+    transition: 200ms;
+}
+
+.green-btn:hover{
+    background-color: #408f40;
+    color: white;
+}
+
+.white-btn{
+    border: none;
+    background-color: #2C2C2C;
+    color: rgb(158, 158, 158);
+    transition: 100ms;
+    font-size: 17px;
+}
+
+.white-btn:hover{
+    background-color: #216bff;
+    color: rgb(238, 238, 238);
+}
+
+.white-btn:active{
+    border: solid 2px lightgrey;
+    background-color: rgb(156, 156, 156);
+}
+
+.blue-btn{
+    border: none;
+    height: 10%;
+    background-color: #4A86FF;
+    color: white;
+    transition: 200ms;
+    border-radius: 10px;
+}
+
+.blue-btn:hover{
+    background-color: #216bff;
+    color: white;
+}
+
+.green-btn:active{
+    background-color: #289728;
+    transform: scale(1, 1);
+}
+
+/* font awesome */
+
+.lni-play{
+    padding: 1%;
+    position: relative;
+}
+
+.lni-save{
+    padding: 2%;
+    position: relative;
+    right: 0%;
+    font-size: 17px !important;
+}
+
+.lni-pencil{
+    color: rgb(158, 158, 158) !important;
+    cursor: text;
+    size: 0.8rem;
+    position: absolute;
+    right: 70%;
+    top: 36%;
+}
+
+.fa-angle-double-left{
+    cursor: pointer;
+    font-size: 30px;
+    position: absolute;
+    top: 4.5px;
+    left: 13px;
+}
+
+.fa-chevron-down{
+    position: absolute;
+    right: 3%;
+    top: 33%;
+    color: rgb(156, 156, 156);
+    font-size: 0.7rem;
+}
+
+
+
+/* Executing */
+.finished-status{
+    position: absolute;
+    right: 20px;
+    height: 80%;
+    width: 107px;
+    top: 10%;
+    border-radius: 30px;
+    background-color: #5CB85C;
+}
+
+.running-status{
+    position: absolute;
+    right: 20px;
+    height: 80%;
+    width: 107px;
+    top: 10%;
+    border-radius: 30px;
+    background-color: #4A86FF;
+}
+.loader {
+    border: 3px solid #4A86FF;
+    border-top: 3px solid white;
+    position: absolute;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    right: 8px;
+    top: 5px;
+    animation: spin .5s linear infinite;
+    z-index: 2;
+  }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    width: 50px;
+    left: 14px;
+    padding: 0;
+    transform: 150ms;
+    color: darkgrey;
+}
+.back:hover{
+    transform: scale(1.04,1.04);
+    color: rgb(102, 102, 102);
+}
+
+/* Saving */
+.save-status{
+    position: absolute;
+    font-size: 0.8rem;
+    right: 140px;
+    top: -4px;
+    color: rgb(117, 117, 117);
+}
+
+.save-status-symbol{
+    padding: 5px;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+/* Chat Box + People Tab*/
+
+.room-box{
+    width: 27%;
+    height: 93%;
+    position: absolute;
+    left: -27%;
+    top: 7%;
+    z-index: 6;
+}
+
+.chat-btn{
+    width: 39px;
+    height: 40px;
+    position: absolute;
+    left: 12px;
+    top: -1px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: rgb(134, 134, 134);
+    transition: 100ms;
+}
+.chat-btn:hover{
+    transform: scale(1.02, 1.02);
+    color: rgb(77, 77, 77);
+}
+
+.room-name-input{
+    position: relative;
+    left: 6%;
+    height: 19px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin: 3px 0px;
+}
+
+.room-pass-input{
+    position: relative;
+    left: 6%;
+    height: 19px;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    margin: 3px 0px;
+}
+
+.chat-window{
+    position: absolute;
+    height: 92%;
+    top: 8%;
+    width: 100%;
+}
+
+.people-window{
+    position: absolute;
+    height: 92%;
+    width: 100%;
+    top: 8%;
+}
+
+.room-box-header{
+    position: absolute;
+    height: 8%;
+    width: 100%;
+    top: 0%;
+    background-color: rgb(228, 228, 228);
+    border: none;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(134, 134, 134);
+}
+
+
+.fa-user-cog{
+    position: absolute;
+    font-size: 27px;
+    bottom: 20%;
+    left: 18%;
+}
+
+.fa-comment-dots{
+    position: absolute;
+    font-size: 27px;
+    bottom: 20%;
+    left: 22%;
+}
+
+.chat-window-btn{
+    position: absolute;
+    height: 100%;
+    width: 13%;
+    left: 13%;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    transform: scale(0.7, 0.7);
+}
+
+
+.people-window-btn{
+    position: absolute;
+    height: 100%;
+    width: 13%;
+    left: 0%;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    transform: scale(0.7, 0.7);
+}
+
+
+.active{
+    color: #216bff;
+    transform: scale(1, 1);
+}
+
+.messages{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+}
+
+.input{
+    position: absolute;
+    bottom: 0%;
+    height: 10%;
+    width: 100%;
+}
+
+.input-message{
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 50px;
+    position: absolute;
+    height: 60%;
+    bottom: 20%;
+    width: 83%;
+    right: 1.5%;
+    padding: 0px 3%;
+    padding-right: 10%;
+}
+
+.send-message{
+    height: 60%;
+    right: 4.5%;
+    top: 20%;
+    position: absolute;
+    border-radius: 50px;
+    border: none;
+    background-color: transparent;
+    color: darkgrey;
+}
+
+.send-message:hover{
+    color : #4A86FF;
+}
+
+.message-container{
+    position: relative;
+    height: auto;
+    min-height: 33px;
+    padding: 10px;
+}
+.message-container:hover{
+    background-color: rgb(227, 239, 255);
+}
+.message-container-header{
+    position: relative;
+    height: 21px;
+    width: 100%;
+    top: 0px;
+    font-size: 9px;
+}
+
+.message-container-body{
+    position: relative;
+    height: auto;
+    width: 100%;
+    font-size: 13px;
+}
+
+.message-container-header-name{
+    width: auto;
+    display: inline;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+}
+
+.message-container-header-time{
+    display: inline;
+    width: auto;
+    position: relative;
+    color: rgb(143, 140, 140);
+}
+
+.people-window-heading{
+    font-weight: 600;
+    color: black;
+    font-size: 18px;
+    border-bottom: 1px lightgrey solid;
+    height: 10%;
+}
+
+.people-window-content{
+    position: relative;
+    padding: 10px 0px;
+}
+
+.fa-crown{
+    padding: 0px 20px;
+    color: #ffc400;
+}
+
+.make-host{
+    position: absolute;
+    font-size: 12px;
+    color: darkgrey;
+    padding: 0px;
+    right: 16px;
+    top: 15px;
+}
+.make-host:hover{
+    color: #216bff;
+}
+
+.make-host-btn{
+    position: absolute;
+    width: 89px;
+    border-radius: 50px;
+    border: none;
+    background-color: #216bff;
+    color: white;
+    right: 21px;
+    top: 3%;
+}
+
+.message-content{
+
+width: 87%;
+
+position: absolute;
+
+left: 13%;
+}
+.people-window-content-container{
+    padding-left: 10px;
+}
+
+.pic{
+    position: absolute;
+    width: 10%;
+    left: 0%;
+    height: 100%;
+}
+.pic-img{
+    width: 70%;
+    right: 0%;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px lightgrey solid;
+    top: 5px;
+}

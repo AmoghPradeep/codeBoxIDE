@@ -1,0 +1,2 @@
+Sorted Array is ->
+12 21 24 52 452 

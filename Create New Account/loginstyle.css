@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+*{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+body{
+
+    cursor: pointer;
+    /* background-color: #1F4068 */
+    margin: 0%;
+
+}
+
+
+input{
+    padding-left: 100px;
+}
+/* divs */
+
+.left-container{
+
+display: inline-block;
+
+height: 550px;
+
+width: 500px;
+
+position: absolute;
+
+top: 20px;
+
+margin-left: 200px;
+
+align-content: center;
+
+margin-top: 3%;
+
+margin-right: 25%;
+
+text-align: center;
+
+/*padding-top: 50px;*/
+}
+
+.right-container
+{
+    left: 809px;
+    display: inline-block;
+    height: 550px;
+    width: 400px;
+    position: absolute;
+    top: 20px;
+    /*background-image: url(trans.jpeg);
+    background-size:100% ;*/
+    padding: 37px 50px;
+    align-content: center;
+    margin-top: 3%;
+    margin-right: 25%;
+    left: 700px;
+}
+
+.login-container{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+}
+
+.image-container{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+}
+
+/* text forms */
+
+.login-text-form{
+    margin: 5px;
+    padding: 5px;
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 60%;
+    padding-left: 3%;
+
+    border-radius: 100px;
+    border-style: none;
+
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+.login-text-form select{
+    color: rgba(0,0,0,0);
+}
+.first-name-form{
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 53%;
+    padding-top: 7.5px;
+    padding-left: 10%;
+
+    border-radius: 100px;
+    border-style: none;
+    border-color: lightslategray;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+.password-new{
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 53%;
+    padding-top: 7.5px;
+    padding-left: 10%;
+    border-radius: 100px;
+    border-style: none;
+    border-color: lightslategray;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+
+.conf-password{
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 53%;
+    padding-top: 7.5px;
+    padding-left: 10%;
+    border-radius: 100px;
+    border-style: none;
+    border-color: lightslategray;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+.last-name-form{
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 60%;
+    padding-top: 7.5px;
+    padding-left: 3%;
+   /* margin-right: 30%;
+    margin-left: 25%;
+    margin-top: 15px;*/
+
+    border-radius: 100px;
+    border-style: none;
+
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+.mail{
+    outline: none;
+    background-color: #dbe5ff;
+    height: 3.125rem;
+    width: 53%;
+    padding-top: 7.5px;
+    padding-left: 10%;
+   /* margin-right: 30%;
+    margin-left: 25%;
+    margin-top: 15px;*/
+
+    border-radius: 100px;
+    border-style: none;
+    border-color: lightslategray;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    position: absolute;
+    right: 20%;
+}
+
+/* buttons */
+
+
+.blue-btn{
+    border: none;
+    position: absolute;
+    height: 8%;
+    background-color: #4A86FF;
+    color: white;
+    transition: 200ms;
+    border-radius: 10px;
+    top: 82%;
+    right: 39%;
+    width: 25%;
+    font-size: 150%;
+}
+
+.blue-btn:hover{
+    background-color: #216bff;
+    color: white;
+}
+
+/*img{
+  position: relative;
+  bottom: 80px;
+  left: 40px;
+  margin-top: 85px;
+}*/
+
+
+i
+{
+    position: absolute;
+    color: slategray;
+}
+
+.icon
+{
+    height: 80px;
+    width: 200px;
+    float: left;
+    margin-left: 50px;
+    background-color: white;
+}
+
+.abtus{
+    font-size: 140%;
+    right: 200px;
+}
+
+hr{
+  border-style:none;
+  border-top-style: dotted;
+  border-width: 8px;
+  width:30%;
+  border-color: grey;
+  margin-top: 0px;
+
+}
+
+h4{
+    top: 10%;
+    font-size: 200%;
+    margin-left: 150px;
+}
+
+.wave{
+
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: -10;
+
+}
+
+.waveup{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: -10;
+}
+
+.border{
+    position: absolute;
+    height: 60%;
+    width: 1px;
+    background-color: lightgray;
+    top: 20%;
+    right: 0%;
+    z-index: 10;
+}
+
+.picture{
+    position: absolute;
+    top: 10%;
+}
